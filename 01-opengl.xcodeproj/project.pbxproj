@@ -13,6 +13,10 @@
 		A2CD7F711E856A9200349ACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CD7F6F1E856A9200349ACA /* Main.storyboard */; };
 		A2CD7F731E856A9200349ACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CD7F721E856A9200349ACA /* Assets.xcassets */; };
 		A2CD7F761E856A9200349ACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CD7F741E856A9200349ACA /* LaunchScreen.storyboard */; };
+		A2CD7F841E86948A00349ACA /* GLESMath.c in Sources */ = {isa = PBXBuildFile; fileRef = A2CD7F7E1E86948A00349ACA /* GLESMath.c */; };
+		A2CD7F851E86948A00349ACA /* GLESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD7F811E86948A00349ACA /* GLESUtils.m */; };
+		A2E9526A1E87BEE900769240 /* CubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E952691E87BEE900769240 /* CubeViewController.m */; };
+		A2E9526E1E8836EF00769240 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2E9526D1E8836EF00769240 /* icon.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,15 @@
 		A2CD7F721E856A9200349ACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CD7F751E856A9200349ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2CD7F771E856A9200349ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2CD7F7E1E86948A00349ACA /* GLESMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GLESMath.c; sourceTree = "<group>"; };
+		A2CD7F7F1E86948A00349ACA /* GLESMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESMath.h; sourceTree = "<group>"; };
+		A2CD7F801E86948A00349ACA /* GLESUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESUtils.h; sourceTree = "<group>"; };
+		A2CD7F811E86948A00349ACA /* GLESUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLESUtils.m; sourceTree = "<group>"; };
+		A2CD7F821E86948A00349ACA /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quaternion.h; sourceTree = "<group>"; };
+		A2CD7F831E86948A00349ACA /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		A2E952681E87BEE900769240 /* CubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeViewController.h; sourceTree = "<group>"; };
+		A2E952691E87BEE900769240 /* CubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeViewController.m; sourceTree = "<group>"; };
+		A2E9526D1E8836EF00769240 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +71,14 @@
 		A2CD7F651E856A9200349ACA /* 01-opengl */ = {
 			isa = PBXGroup;
 			children = (
+				A2CD7F7D1E86948A00349ACA /* Utils */,
 				A2CD7F691E856A9200349ACA /* AppDelegate.h */,
 				A2CD7F6A1E856A9200349ACA /* AppDelegate.m */,
 				A2CD7F6C1E856A9200349ACA /* ViewController.h */,
 				A2CD7F6D1E856A9200349ACA /* ViewController.m */,
+				A2E952681E87BEE900769240 /* CubeViewController.h */,
+				A2E952691E87BEE900769240 /* CubeViewController.m */,
+				A2E9526D1E8836EF00769240 /* icon.jpg */,
 				A2CD7F6F1E856A9200349ACA /* Main.storyboard */,
 				A2CD7F721E856A9200349ACA /* Assets.xcassets */,
 				A2CD7F741E856A9200349ACA /* LaunchScreen.storyboard */,
@@ -77,6 +94,19 @@
 				A2CD7F671E856A9200349ACA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2CD7F7D1E86948A00349ACA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A2CD7F7E1E86948A00349ACA /* GLESMath.c */,
+				A2CD7F7F1E86948A00349ACA /* GLESMath.h */,
+				A2CD7F801E86948A00349ACA /* GLESUtils.h */,
+				A2CD7F811E86948A00349ACA /* GLESUtils.m */,
+				A2CD7F821E86948A00349ACA /* Quaternion.h */,
+				A2CD7F831E86948A00349ACA /* Vector.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E9526E1E8836EF00769240 /* icon.jpg in Resources */,
 				A2CD7F761E856A9200349ACA /* LaunchScreen.storyboard in Resources */,
 				A2CD7F731E856A9200349ACA /* Assets.xcassets in Resources */,
 				A2CD7F711E856A9200349ACA /* Main.storyboard in Resources */,
@@ -151,7 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CD7F841E86948A00349ACA /* GLESMath.c in Sources */,
+				A2E9526A1E87BEE900769240 /* CubeViewController.m in Sources */,
 				A2CD7F6E1E856A9200349ACA /* ViewController.m in Sources */,
+				A2CD7F851E86948A00349ACA /* GLESUtils.m in Sources */,
 				A2CD7F6B1E856A9200349ACA /* AppDelegate.m in Sources */,
 				A2CD7F681E856A9200349ACA /* main.m in Sources */,
 			);
@@ -275,6 +309,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X3TXB8284A;
 				INFOPLIST_FILE = "01-opengl/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CF.-1-opengl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X3TXB8284A;
 				INFOPLIST_FILE = "01-opengl/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CF.-1-opengl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +348,7 @@
 				A2CD7F7C1E856A9200349ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
